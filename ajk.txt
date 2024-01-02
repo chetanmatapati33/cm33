@@ -1,0 +1,929 @@
+Free Software Movement Karnataka
+Introduction to Python Programming Lab (BPLCK105B/205B)
+www.fsmk.org
+}
+I/II Semester
+(common to all branches)
+}
+LAB MANUAL
+Prabodh C P
+Asst Professor
+Dept of CSE, SIT
+Volunteer, FSMK
+Visit : https://tinyurl.com/yc5h2mu9
+The versioned repository of all the programs can be found here as a GitLab Repository
+https://gitlab.com/lab_manuals/22plc15b_intro_py_prog
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+To veiw a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+Contents
+Setting up the Python Environment iii
+1 Question 1 1
+1.1 Student Details . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.2 Senior Citizen Check . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+2 Question 2 4
+2.1 Fibonacci Sequence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+2.2 Binomial Coefficient . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+3 Mean, Variance and Standard Deviation 6
+4 Digit Frequency 8
+5 Word Frequency 9
+6 Sort File Contents 11
+7 Backup Directory into Zip 13
+8 Assertions and Exceptions Demo 14
+9 Complex Class Demo 16
+10 Student Class Demo 19
+i
+Listings
+1.1 01AStudDetails.py . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+1.2 OUTPUT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+1.3 01BChkSnrCitzn.py . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+1.4 OUTPUT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+2.1 02AFibonacci.py . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+2.2 OUTPUT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+2.3 02BFactNCR.py . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+2.4 OUTPUT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+3.1 03MeanVarSD.py . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+3.2 OUTPUT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+4.1 04DigitFreq.py . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+4.2 OUTPUT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+5.1 05WordFreq.py . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+5.2 OUTPUT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+6.1 06SortLinesFile.py . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+6.2 OUTPUT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+7.1 07BackFolderZip.py . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+7.2 OUTPUT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+8.1 08AssertExceptDemo.py . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+8.2 OUTPUT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15
+9.1 09ComplexClass.py . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+9.2 OUTPUT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+10.1 10StudentClass.py . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19
+10.2 OUTPUT . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+ii
+Preface
+Usage of Free and Open Source Software
+This manual has been prepared entirely using Free Software. The following Free Software has been used in preparation
+of this manual.
+Operating System Ubuntu 22.04.1 LTS (Jammy Jellyfish)
+Linux Kernel 5.15.0-56-generic
+Interpreter Python 3.9.13
+IDE Spyder 5.3.3
+Version Control git 2.34.1
+Typesetting Texmaker 5.0.3 with LaTeX
+Image Editing GIMP 2.10.30
+I am sharing this manual under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+License. To veiw a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/.
+You are free to share modify this manual with attribution for academic purposes. A repository of all the programs can
+be found as GitLab repository in the following link https://gitlab.com/lab_manuals/22plc15b_intro_
+py_prog. Looking for your feedback. If you want to contribute let me know by sending a PR on the git repo
+mentioned earlier.
+Use and spread the word of Free Software. Free Software leads to a Free Society!
+Prabodh C P
+iii
+Setting up Python Programming
+Environment
+Introduction
+This tutorial will help you in setting up a Python 3 programming environment on Ubuntu 22.04. (Should also work
+on previous release Ubuntu 20.04 as well). If you do not have Ubuntu 22.04 installed on your machine, you can follow
+the detailed description of installing Ubuntu 22.04 Desktop in the following link below.
+https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview
+Majority of GNU/Linux distribution including Ubuntu 22.04 and other versions of Debian Linux ship with Python
+3 pre-installed. You can check whether Python is installed or not by issuing the following command in the terminal.
+To launch the terminal press Ctrl+Alt+t
+1 $ python3 -V
+You’ll receive output in the terminal window that will let you know the version number. While this number may
+vary, the output will be similar to this:
+iv
+LISTINGS LISTINGS
+Anaconda Distribution
+Anaconda Distribution equips individuals to easily search and install thousands of Python/R packages and access a
+vast library of community content and support. Especially with Python being very popular and defacto platform for
+Data Science. Also it provides good graphical IDEs like Spyder and Jupyter Notebook.
+Download Anaconda Distribution
+If you want to install Anaconda Distribution on your system, you can download it from its official webpage.
+https://www.anaconda.com/products/distribution
+It is available for Linux, Mac, Windows platforms. Download the suitable version based on your operating system.
+Install Anaconda Distribution
+Headover to the folder where it is was downloaded. Open a terminal and navigate to the folder. Run the 3 commands
+as shown in the diagram below.
+The installer proceeds to setup the Anaconda distribution. Choose to perform the default action yes whenever
+prompted.
+Launch Anaconda Distribution
+Once installed open a terminal and run the following command to launch Anaconda Navigator.
+Dept of CSE, SIT - CPP v
+LISTINGS LISTINGS
+Here in Anaconda Navigator choose Spyder IDE. Click on the launch button below it to start the IDE.
+Spyder IDE
+Type a Python program and save it with .py extension. A sample program is shown below.
+Dept of CSE, SIT - CPP vi
+LISTINGS LISTINGS
+Then click on Run button (green triangle button) to execute the program. If the program has any errors they
+are shown on console on the bottom right section. Otherwise the program starts executing and output is shown in
+the console sub window. A sample is shown below.
+Dept of CSE, SIT - CPP vii
+Chapter 1
+Question 1
+1.1 Student Details
+Question
+Develop a program to read the student details like Name, USN, and Marks in three subjects. Display the student details, total marks and percentage with suitable messages.
+Python Code
+1 #!/usr/bin/env python3
+2 # -*- coding: utf-8 -*-
+3 """
+4 Created on Fri Dec 23 13:01:34 2022
+5
+6 01AStudDetails.py
+7 Develop a program to read the student details like Name, USN, and Marks in three
+subjects.
+8 Display the student details, total marks and percentage with suitable messages.
+9
+10 @author: Prabodh C P
+11 """
+12
+13 stName = input("Enter the name of the student : ")
+14 stUSN = input("Enter the USN of the student : ")
+15 stMarks1 = int(input("Enter marks in Subject 1 : "))
+16 stMarks2 = int(input("Enter marks in Subject 2 : "))
+17 stMarks3 = int(input("Enter marks in Subject 3 : "))
+18
+19
+20 print("Student Details\n=========================")
+21 print("%12s"%("Name :"), stName)
+22 print("%12s"%("USN :"), stUSN)
+23 print("%12s"%("Marks 1 :"), stMarks1)
+24 print("%12s"%("Marks 2 :"), stMarks2)
+25 print("%12s"%("Marks 3 :"), stMarks3)
+26 print("%12s"%("Total :"), stMarks1+stMarks2+stMarks3)
+27 print("%12s"%("Percent :"), "%.2f"%((stMarks1+stMarks2+stMarks3)/3))
+28 print("=========================")
+Listing 1.1: 01AStudDetails.py
+1
+1.2. SENIOR CITIZEN CHECK CHAPTER 1. QUESTION 1
+Output
+=================================
+1 putta:˜/.../Programs$ python3 01AStudDetails.py
+2
+3 Enter the name of the student : RAMESH
+4 Enter the USN of the student : 1SI22CS036
+5 Enter marks in Subject 1 : 87
+6 Enter marks in Subject 2 : 78
+7 Enter marks in Subject 3 : 65
+8 Student Details
+9 =========================
+10 Name : RAMESH
+11 USN : 1SI22CS036
+12 Marks 1 : 87
+13 Marks 2 : 78
+14 Marks 3 : 65
+15 Total : 230
+16 Percent : 76.67
+17 =========================
+Listing 1.2: OUTPUT
+1.2 Senior Citizen Check
+Question
+Develop a program to read the name and year of birth of a person. Display whether the person
+is a senior citizen or not.
+Python Code
+1 #!/usr/bin/env python3
+2 # -*- coding: utf-8 -*-
+3 """
+4 Created on Fri Dec 23 13:23:54 2022
+5
+6 01BChkSnrCitzn.py
+7
+8 Develop a program to read the name and year of birth of a person. Display whether
+the person is a senior citizen or not.
+9
+10 @author: Prabodh C P
+11 """
+12 from datetime import date
+13
+14
+15 perName = input("Enter the name of the person : ")
+16 perDOB = int(input("Enter his year of birth : "))
+17
+18 curYear = date.today().year
+19 perAge = curYear - perDOB
+20
+21 if (perAge > 60):
+22 print(perName, "aged", perAge, "years is a Senior Citizen.")
+23 else:
+24 print(perName, "aged", perAge, "years is not a Senior Citizen.")
+Listing 1.3: 01BChkSnrCitzn.py
+Dept of CSE, SIT - CPP 2
+1.2. SENIOR CITIZEN CHECK CHAPTER 1. QUESTION 1
+Output
+=================================
+1 putta:˜/.../Programs$ python3 01BChkSnrCitzn.py
+2
+3 Enter the name of the person : Akbar Khan
+4 Enter his year of birth : 1978
+5 Akbar Khan aged 44 years is not a Senior Citizen.
+6
+7 putta:˜/.../Programs$ python3 01BChkSnrCitzn.py
+8
+9 Enter the name of the person : George Best
+10 Enter his year of birth : 1957
+11 George Best aged 65 years is a Senior Citizen.
+Listing 1.4: OUTPUT
+Dept of CSE, SIT - CPP 3
+Chapter 2
+Question 2
+2.1 Fibonacci Sequence
+Question
+Develop a program to generate Fibonacci sequence of length (N). Read N from the console.
+Python Code
+1 #!/usr/bin/env python3
+2 # -*- coding: utf-8 -*-
+3 """
+4 Created on Fri Dec 23 13:36:30 2022
+5
+6 02AFibonacci.py
+7
+8 Develop a program to generate Fibonacci sequence of length (N). Read N from the
+console.
+9
+10 @author: Prabodh C P
+11 """
+12
+13 num = int(input("Enter the Fibonacci sequence length to be generated : "))
+14
+15 firstTerm = 0
+16 secondTerm = 1
+17 print("The Fibonacci series with", num, "terms is :")
+18 print(firstTerm, secondTerm, end=" ")
+19 for i in range(2,num):
+20 curTerm = firstTerm + secondTerm
+21 print(curTerm, end=" ")
+22 firstTerm = secondTerm
+23 secondTerm = curTerm
+24 print()
+Listing 2.1: 02AFibonacci.py
+Output
+1 putta:˜/.../Programs$ python3 02AFibonacci.py
+2
+3 Enter the Fibonacci sequence length to be generated : 8
+4 The Fibonacci series with 8 terms is :
+5 0 1 1 2 3 5 8 13
+6
+7
+4
+2.2. BINOMIAL COEFFICIENT CHAPTER 2. QUESTION 2
+8 putta:˜/.../Programs$ python3 02AFibonacci.py
+9
+10 Enter the Fibonacci sequence length to be generated : 5
+11 The Fibonacci series with 5 terms is :
+12 0 1 1 2 3
+Listing 2.2: OUTPUT
+2.2 Binomial Coefficient
+Question
+Write a function to calculate factorial of a number. Develop a program to compute binomial coefficient (Given N and R).
+Python Code
+1 #!/usr/bin/env python3
+2 # -*- coding: utf-8 -*-
+3 """
+4 Created on Fri Dec 23 13:36:52 2022
+5 02BFactNCR.py
+6 Write a function to calculate factorial of a number.
+7 Develop a program to compute binomial coefficient (Given N and R).
+8
+9 @author: Prabodh C P
+10 """
+11
+12 def fact(num):
+13 if num == 0:
+14 return 1
+15 else:
+16 return num * fact(num-1)
+17 n = int(input("Enter the value of N : "))
+18 r = int(input("Enter the value of R (R cannot be negative or greater than N): "))
+19 nCr = fact(n)/(fact(r)*fact(n-r))
+20 print(n,’C’,r," = ","%d"%nCr,sep="")
+Listing 2.3: 02BFactNCR.py
+Output
+1 putta:˜/.../Programs$ python3 02BFactNCR.py
+2 Enter the value of N : 7
+3 Enter the value of R (R cannot be negative or greater than N): 5
+4 7C5 = 21
+5
+6 Enter the value of N : 5
+7 Enter the value of R (R cannot be negative or greater than N): 5
+8 5C5 = 1
+9
+10 Enter the value of N : 3
+11 Enter the value of R (R cannot be negative or greater than N): 1
+12 3C1 = 3
+13
+14 Enter the value of N : 8
+15 Enter the value of R (R cannot be negative or greater than N): 0
+16 8C0 = 1
+Listing 2.4: OUTPUT
+Dept of CSE, SIT - CPP 5
+Chapter 3
+Mean, Variance and Standard Deviation
+Question
+Read N numbers from the console and create a list. Develop a program to print mean, variance
+and standard deviation with suitable messages.
+Python Code
+1 #!/usr/bin/env python3
+2 # -*- coding: utf-8 -*-
+3 """
+4 Created on Fri Dec 23 13:59:36 2022
+5
+6 03MeanVarSD.py
+7
+8 Read N numbers from the console and create a list. Develop a program to print mean,
+variance and
+9 standard deviation with suitable messages.
+10
+11 @author: Prabodh C P
+12 """
+13
+14 from math import sqrt
+15
+16 myList = []
+17
+18 num = int(input("Enter the number of elements in your list : "))
+19
+20 for i in range(num):
+21 val = int(input("Enter the element : "))
+22 myList.append(val)
+23
+24 print(’The length of list1 is’, len(myList))
+25
+26 print(’List Contents’, myList)
+27
+28
+29 total = 0
+30 for elem in myList:
+31 total += elem
+32
+33 mean = total / num
+34
+35 total = 0
+36 for elem in myList:
+37 total += (elem - mean) * (elem - mean)
+38
+6
+CHAPTER 3. MEAN, VARIANCE AND STANDARD DEVIATION
+39 variance = total / num
+40
+41 stdDev = sqrt(variance)
+42
+43 print("Mean =", mean)
+44 print("Variance =", variance)
+45 print("Standard Deviation =", "%.2f"%stdDev)
+Listing 3.1: 03MeanVarSD.py
+Output
+1 putta:˜/.../Programs$ python3 03_Mean_Var_SD.py
+2
+3 Enter the number of elements in your list : 5
+4 Enter the element : 45
+5 Enter the element : 34
+6 Enter the element : 86
+7 Enter the element : 92
+8 Enter the element : 35
+9
+10 The length of list1 is 5
+11 List Contents [45, 34, 86, 92, 35]
+12
+13 Mean = 58.4
+14 Variance = 642.64
+15 Standard Deviation = 25.35
+Listing 3.2: OUTPUT
+Dept of CSE, SIT - CPP 7
+Chapter 4
+Digit Frequency
+Question
+Read a multi-digit number (as chars) from the console. Develop a program to print the frequency
+of each digit with suitable message.
+Python Code
+1 #!/usr/bin/env python3
+2 # -*- coding: utf-8 -*-
+3 """
+4 Created on Fri Dec 23 14:12:31 2022
+5 04DigitFreq.py
+6 Read a multi-digit number (as chars) from the console.
+7 Develop a program to print the frequency of each digit with suitable message.
+8 @author: Prabodh C P
+9 """
+10 num = input("Enter a number : ")
+11 print("The number entered is :", num)
+12 uniqDig = set(num)
+13 for elem in uniqDig:
+14 print(elem, "occurs", num.count(elem), "times")
+Listing 4.1: 04DigitFreq.py
+Output
+1 putta:˜/.../Programs$ python3 04DigitFreq.py
+2
+3 Enter a number : 234939
+4 The number entered is : 234939
+5 4 occurs 1 times
+6 9 occurs 2 times
+7 3 occurs 2 times
+8 2 occurs 1 times
+9
+10 putta:˜/.../Programs$ python3 04DigitFreq.py
+11
+12 Enter a number : 7843338
+13 The number entered is : 7843338
+14 7 occurs 1 times
+15 4 occurs 1 times
+16 3 occurs 3 times
+17 8 occurs 2 times
+Listing 4.2: OUTPUT
+8
+Chapter 5
+Word Frequency
+Question
+Develop a program to print 10 most frequently appearing words in a text file. [Hint: Use dictionary with distinct words and their frequency of occurrences. Sort the dictionary in the reverse
+order of frequency and display dictionary slice of first 10 items]
+Python Code
+1 #!/usr/bin/env python3
+2 # -*- coding: utf-8 -*-
+3 """
+4 Created on Fri Dec 23 14:21:12 2022
+5
+6 05WordFreq.py
+7
+8 Develop a program to print 10 most frequently appearing words in a text file. [Hint:
+Use dictionary with distinct words and their frequency of occurrences. Sort the
+dictionary in the reverse order of frequency and display dictionary slice of
+first 10 items]
+9
+10 @author: Prabodh C P
+11 """
+12 import sys
+13 import string
+14 import os.path
+15
+16 fname = input("Enter the filename : ") #sample file text.txt also provided
+17
+18 if not os.path.isfile(fname):
+19 print("File", fname, "doesn’t exists")
+20 sys.exit(0)
+21
+22 infile = open(fname, "r")
+23
+24 filecontents = ""
+25
+26 for line in infile:
+27 for ch in line:
+28 if ch not in string.punctuation:
+29 filecontents = filecontents + ch
+30 else:
+31 filecontents = filecontents + ’ ’ #replace punctuations and \n with
+space
+32
+33 wordFreq = {}
+34 wordList = filecontents.split()
+9
+CHAPTER 5. WORD FREQUENCY
+35
+36 #Calculate word Frequency
+37
+38 for word in wordList:
+39 if word not in wordFreq.keys():
+40 wordFreq[word] = 1
+41 else:
+42 wordFreq[word] += 1
+43
+44 #Sort Dictionary based on values in descending order
+45 sortedWordFreq = sorted(wordFreq.items(), key=lambda x:x[1], reverse=True )
+46
+47 #Display 10 most frequently appearing words with their count
+48
+49 print("\n===================================================")
+50 print("10 most frequently appearing words with their count")
+51 print("===================================================")
+52 for i in range(10):
+53 print(sortedWordFreq[i][0], "occurs", sortedWordFreq[i][1], "times")
+Listing 5.1: 05WordFreq.py
+Output
+1 putta:˜/.../Programs$ python3 05WordFreq.py
+2
+3 Enter the filename : text.txt
+4
+5 ===================================================
+6 10 most frequently appearing words with their count
+7 ===================================================
+8 the occurs 45 times
+9 of occurs 24 times
+10 party occurs 12 times
+11 part occurs 12 times
+12 a occurs 9 times
+13 and occurs 8 times
+14 second occurs 7 times
+15 to occurs 6 times
+16 shall occurs 6 times
+17 first occurs 5 times
+Listing 5.2: OUTPUT
+Dept of CSE, SIT - CPP 10
+Chapter 6
+Sort File Contents
+Question
+Develop a program to sort the contents of a text file and write the sorted contents into a separate
+text file. [Hint: Use string methods strip(), len(), list methods sort(), append(), and file methods
+open(), readlines(), and write()].
+Python Code
+1 #!/usr/bin/env python3
+2 # -*- coding: utf-8 -*-
+3 """
+4 Created on Fri Dec 23 17:14:27 2022
+5
+6 06SortLinesFile.py
+7
+8 Develop a program to sort the contents of a text file and write the sorted contents
+into a separate text
+9 file. [Hint: Use string methods strip(), len(), list methods sort(), append(), and
+file methods open(),
+10 readlines(), and write()].
+11
+12 @author: Prabodh C P
+13 """
+14
+15 import os.path
+16 import sys
+17
+18 fname = input("Enter the filename whose contents are to be sorted : ") #sample
+file unsorted.txt also provided
+19
+20 if not os.path.isfile(fname):
+21 print("File", fname, "doesn’t exists")
+22 sys.exit(0)
+23
+24 infile = open(fname, "r")
+25
+26 myList = infile.readlines()
+27 # print(myList)
+28
+29 #Remove trailing \n characters
+30 lineList = []
+31 for line in myList:
+32 lineList.append(line.strip())
+33
+34 lineList.sort()
+35
+11
+CHAPTER 6. SORT FILE CONTENTS
+36 #Write sorted contents to new file sorted.txt
+37
+38 outfile = open("sorted.txt","w")
+39
+40
+41 for line in lineList:
+42 outfile.write(line + "\n")
+43
+44 infile.close() # Close the input file
+45 outfile.close() # Close the output file
+46
+47
+48 if os.path.isfile("sorted.txt"):
+49 print("\nFile containing sorted content sorted.txt created successfully")
+50 print("sorted.txt contains", len(lineList), "lines")
+51 print("Contents of sorted.txt")
+52 print("=================================================================")
+53 rdFile = open("sorted.txt","r")
+54 for line in rdFile:
+55 print(line, end="")
+Listing 6.1: 06SortLinesFile.py
+Output
+1 putta:˜/.../Programs$ python3 06SortLinesFile.py
+2
+3 Enter the filename whose contents are to be sorted : unsorted.txt
+4
+5 File containing sorted content sorted.txt created successfully
+6 sorted.txt contains 15 lines
+7 Contents of sorted.txt
+8 =================================================================
+9 A deep C diva.
+10 All the troubles you have will pass away very quickly.
+11 Beware of a tall black man with one blond shoe.
+12 Don’t read everything you believe.
+13 Exercise caution in your daily affairs.
+14 He changes the domain.
+15 How does a hacker fix a function which doesn’t work for all of the elements in its
+domain?
+16 Lay on, MacDuff, and curs’d be him who first cries, "Hold, enough!".
+17 People are beginning to notice you. Try dressing before you leave the house.
+18 The surest protection against temptation is cowardice.
+19 To be or not to be.
+20 Tuesday is the Wednesday of the rest of your life.
+21 What is the square root of 4bˆ2?
+22 You display the wonderful traits of charm and courtesy.
+23 You may be recognized soon. Hide.
+Listing 6.2: OUTPUT
+Dept of CSE, SIT - CPP 12
+Chapter 7
+Backup Directory into Zip
+Question
+Develop a program to backing Up a given Folder (Folder in a current working directory) into a
+ZIP File by using relevant modules and suitable methods.
+Python Code
+1 #!/usr/bin/env python3
+2 # -*- coding: utf-8 -*-
+3 """
+4 Created on Fri Dec 23 16:14:28 2022
+5 07BackFolderZip.py
+6 Develop a program to backing Up a given Folder (Folder in a current working
+directory) into a ZIP
+7 File by using relevant modules and suitable methods.
+8 @author: Prabodh C P
+9 """
+10 import os
+11 import sys
+12 import pathlib
+13 import zipfile
+14
+15 dirName = input("Enter Directory name that you want to backup : ")
+16 if not os.path.isdir(dirName):
+17 print("Directory", dirName, "doesn’t exists")
+18 sys.exit(0)
+19 curDirectory = pathlib.Path(dirName)
+20 with zipfile.ZipFile("myZip.zip", mode="w") as archive:
+21 for file_path in curDirectory.rglob("*"):
+22 archive.write(file_path, arcname=file_path.relative_to(curDirectory))
+23 if os.path.isfile("myZip.zip"):
+24 print("Archive", "myZip.zip", "created successfully")
+25 else:
+26 print("Error in creating zip archive")
+Listing 7.1: 07BackFolderZip.py
+Output
+1 putta:˜/.../Programs$ python3 07BackFolderZip.py
+2
+3 Enter Directory name that you want to backup : zipDemo
+4 Archive myZip.zip created successfully
+Listing 7.2: OUTPUT
+13
+Chapter 8
+Assertions and Exceptions Demo
+Question
+Write a function named DivExp which takes TWO parameters a, b and returns a value c (c=a/b).
+Write suitable assertion for a greater than 0 in function DivExp and raise an exception for when
+b=0. Develop a suitable program which reads two values from the console and calls a function
+DivExp.
+Python Code
+1 #!/usr/bin/env python3
+2 # -*- coding: utf-8 -*-
+3 """
+4 Created on Fri Dec 23 17:50:46 2022
+5
+6 08AssertExceptDemo.py
+7
+8 Write a function named DivExp which takes TWO parameters a, b and returns a value c
+(c=a/b). Write suitable assertion for a>0 in function DivExp and raise an
+exception for when b=0. Develop a suitable program which reads two values from
+the console and calls a function DivExp.
+9
+10 @author: Prabodh C P
+11 """
+12 import sys
+13
+14 def DivExp(a,b):
+15 assert a>0, "a should be greater than 0"
+16 try:
+17 c = a/b
+18 except ZeroDivisionError:
+19 print("Value of b cannot be zero")
+20 sys.exit(0)
+21 else:
+22 return c
+23
+24 val1 = int(input("Enter a value for a : "))
+25 val2 = int(input("Enter a value for b : "))
+26
+27 val3 = DivExp(val1, val2)
+28
+29 print(val1, "/", val2, "=", val3)
+Listing 8.1: 08AssertExceptDemo.py
+Output
+14
+CHAPTER 8. ASSERTIONS AND EXCEPTIONS DEMO
+1 putta:˜/.../Programs$ python3 08AssertExceptDemo.py
+2 Enter a value for a : 7
+3 Enter a value for b : 6
+4 7 / 6 = 1.1666666666666667
+5
+6 putta:˜/.../Programs$ python3 08AssertExceptDemo.py
+7 Enter a value for a : 0
+8 Enter a value for b : 5
+9 AssertionError: a should be greater than 0
+10
+11 putta:˜/.../Programs$ python3 08AssertExceptDemo.py
+12 Enter a value for a : -3
+13 Enter a value for b : 6
+14 AssertionError: a should be greater than 0
+15
+16 putta:˜/.../Programs$ python3 08AssertExceptDemo.py
+17 Enter a value for a : 6
+18 Enter a value for b : 0
+19 Value of b cannot be zero
+Listing 8.2: OUTPUT
+Dept of CSE, SIT - CPP 15
+Chapter 9
+Complex Class Demo
+Question
+Define a function which takes 2 objects representing complex numbers and returns new complex
+number with a addition of two complex numbers. Define a suitable class Complex to represent
+the complex number. Develop a program to read N (N greater than 2) complex numbers and to
+compute the addition of N complex numbers.
+Python Code
+1 #!/usr/bin/env python3
+2 # -*- coding: utf-8 -*-
+3 """
+4 Created on Fri Dec 23 18:11:47 2022
+5
+6 09ComplexClass.py
+7
+8 Define a function which takes 2 objects representing complex numbers and returns new
+complex number with a addition of two complex numbers. Define a suitable class
+Complex to represent the complex number. Develop a program to read N (N >= 2)
+complex numbers and to compute the addition of N complex numbers.
+9
+10 @author: Prabodh C P
+11 """
+12
+13 class Complex:
+14 def __init__(self, realp = 0, imagp=0):
+15 self.realp = realp
+16 self.imagp = imagp
+17
+18 def setComplex(self, realp, imagp):
+19 self.realp = realp
+20 self.imagp = imagp
+21
+22 def readComplex(self):
+23 self.realp = int(input("Enter the real part : "))
+24 self.imagp = int(input("Enter the real part : "))
+25
+26 def showComplex(self):
+27 print(’(’,self.realp,’)’,’+i’,’(’,self.imagp,’)’,sep="")
+28
+29 def addComplex(self, c2):
+30 c3 = Complex()
+31 c3.realp = self.realp + c2.realp
+32 c3.imagp = self.imagp + c2.imagp
+33 return c3
+34
+16
+CHAPTER 9. COMPLEX CLASS DEMO
+35 def add2Complex(a,b):
+36 c = a.addComplex(b)
+37 return c
+38
+39 def main():
+40 c1 = Complex(3,5)
+41 c2 = Complex(6,4)
+42
+43 print("Complex Number 1")
+44 c1.showComplex()
+45 print("Complex Number 2")
+46 c2.showComplex()
+47
+48 c3 = add2Complex(c1, c2)
+49
+50 print("Sum of two Complex Numbers")
+51 c3.showComplex()
+52
+53 #Addition of N (N >=2) complex numbers
+54
+55 compList = []
+56
+57 num = int(input("\nEnter the value for N : "))
+58
+59 for i in range(num):
+60 print("Object", i+1)
+61 obj = Complex()
+62 obj.readComplex()
+63 compList.append(obj)
+64
+65 print("\nEntered Complex numbers are : ")
+66 for obj in compList:
+67 obj.showComplex()
+68
+69 sumObj = Complex()
+70 for obj in compList:
+71 sumObj = add2Complex(sumObj, obj)
+72
+73
+74 print("\nSum of N complex numbers is", end = " ")
+75 sumObj.showComplex()
+76
+77 main()
+Listing 9.1: 09ComplexClass.py
+Output
+1 putta:˜/.../Programs$ python3 09ComplexClass.py
+2
+3 Complex Number 1
+4 (3)+i(5)
+5 Complex Number 2
+6 (6)+i(4)
+7 Sum of two Complex Numbers
+8 (9)+i(9)
+9
+10 Enter the value for N : 5
+11 Object 1
+12 Enter the real part : 1
+13 Enter the real part : 9
+14 Object 2
+15 Enter the real part : 2
+16 Enter the real part : 8
+Dept of CSE, SIT - CPP 17
+CHAPTER 9. COMPLEX CLASS DEMO
+17 Object 3
+18 Enter the real part : 3
+19 Enter the real part : 7
+20 Object 4
+21 Enter the real part : 4
+22 Enter the real part : 6
+23 Object 5
+24 Enter the real part : 5
+25 Enter the real part : 5
+26
+27 Entered Complex numbers are :
+28 (1)+i(9)
+29 (2)+i(8)
+30 (3)+i(7)
+31 (4)+i(6)
+32 (5)+i(5)
+33
+34 Sum of N complex numbers is (15)+i(35)
+Listing 9.2: OUTPUT
+Dept of CSE, SIT - CPP 18
+Chapter 10
+Student Class Demo
+Question
+Develop a program that uses class Student which prompts the user to enter marks in three subjects and calculates total marks, percentage and displays the score card details. [Hint: Use list
+to store the marks in three subjects and total marks. Use init method to initialize name, USN
+and the lists to store marks and total, Use getMarks() method to read marks into the list, and
+display() method to display the score card details.]
+Python Code
+1 #!/usr/bin/env python3
+2 # -*- coding: utf-8 -*-
+3 """
+4 Created on Fri Dec 23 18:58:35 2022
+5
+6 10StudentClass.py
+7
+8 Develop a program that uses class Student which prompts the user to enter marks in
+three subjects and calculates total marks, percentage and displays the score card
+details. [Hint: Use list to store the marks in three subjects and total marks.
+Use __init__() method to initialize name, USN and the lists to store marks and
+total, Use getMarks() method to read marks into the list, and display() method to
+display the score card details.]
+9
+10 @author: Prabodh C P
+11 """
+12
+13 class Student:
+14 def __init__(self, name = "", usn = "", score = [0,0,0,0]):
+15 self.name = name
+16 self.usn = usn
+17 self.score = score
+18
+19 def getMarks(self):
+20 self.name = input("Enter student Name : ")
+21 self.usn = input("Enter student USN : ")
+22 self.score[0] = int(input("Enter marks in Subject 1 : "))
+23 self.score[1] = int(input("Enter marks in Subject 2 : "))
+24 self.score[2] = int(input("Enter marks in Subject 3 : "))
+25 self.score[3] = self.score[0] + self.score[1] + self.score[2]
+26
+27 def display(self):
+28 percentage = self.score[3]/3
+29 spcstr = "=" * 81
+30 print(spcstr)
+31 print("SCORE CARD DETAILS".center(81))
+19
+CHAPTER 10. STUDENT CLASS DEMO
+32 print(spcstr)
+33 print("%15s"%("NAME"), "%12s"%("USN"), "%8s"%"MARKS1","%8s"%"MARKS2","%8s"%"
+MARKS3","%8s"%"TOTAL","%12s"%("PERCENTAGE"))
+34 print(spcstr)
+35 print("%15s"%self.name, "%12s"%self.usn, "%8d"%self.score[0],"%8d"%self.
+score[1],"%8d"%self.score[2],"%8d"%self.score[3],"%12.2f"%percentage)
+36 print(spcstr)
+37
+38
+39 def main():
+40 s1 = Student()
+41 s1.getMarks()
+42 s1.display()
+43
+44 main()
+Listing 10.1: 10StudentClass.py
+Output
+1 putta:˜/.../Programs$ python3 10StudentClass.py
+2
+3 Enter student Name : Shivappa
+4 Enter student USN : 1SI22CS065
+5 Enter marks in Subject 1 : 87
+6 Enter marks in Subject 2 : 79
+7 Enter marks in Subject 3 : 92
+8 =================================================================================
+9 SCORE CARD DETAILS
+10 =================================================================================
+11 NAME USN MARKS1 MARKS2 MARKS3 TOTAL PERCENTAGE
+12 =================================================================================
+13 Shivappa 1SI22CS065 87 79 92 258 86.00
+14 =================================================================================
+Listing 10.2: OUTPUT
+Dept of CSE, SIT - CPP 20
